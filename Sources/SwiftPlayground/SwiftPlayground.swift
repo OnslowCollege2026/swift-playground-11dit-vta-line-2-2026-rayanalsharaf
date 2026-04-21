@@ -17,5 +17,9 @@ struct SwiftPlayground {
         print("RRR    AAAAA")
         print("R  R   A   A")
         print("R   R  A   A")
+
+        // First constant firstname
+        let firstName = "Rayan"
+        print(firstName)
     }
 }
