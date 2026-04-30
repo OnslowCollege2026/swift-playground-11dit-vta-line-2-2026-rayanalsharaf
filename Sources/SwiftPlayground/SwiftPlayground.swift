@@ -58,5 +58,26 @@ struct SwiftPlayground {
 
         print("\(dogAge) dog years is \(humanYears) years for humans")
         
+     // Task 4 mini task Boolean
+        print("Enter your age")
+        
+        var userInput = readLine()!
+        let age = Int(userInput)!
+
+        print("Enter your password:")
+        userInput = readLine()!
+
+        let isOldEnough = age >= 18
+        if age < 18 {
+            print("you are not old enough.")
+        } else {
+            print("you are old enough.")
+        }
+
+        let knowsSecret = userInput == "year11DITiscool!"
+        let canEnterBar = isOldEnough && knowsSecret
+
+        print(canEnterBar)
+
     }
 }
