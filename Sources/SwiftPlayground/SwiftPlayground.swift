@@ -63,9 +63,7 @@ struct SwiftPlayground {
         
         var userInput = readLine()!
         let age = Int(userInput)!
-
-        print("Enter your password:")
-        userInput = readLine()!
+        
 
         let isOldEnough = age >= 18
         if age < 18 {
@@ -73,6 +71,9 @@ struct SwiftPlayground {
         } else {
             print("you are old enough.")
         }
+
+        print("Enter your password:")
+        userInput = readLine()!
 
         let knowsSecret = userInput == "year11DITiscool!"
         let canEnterBar = isOldEnough && knowsSecret
