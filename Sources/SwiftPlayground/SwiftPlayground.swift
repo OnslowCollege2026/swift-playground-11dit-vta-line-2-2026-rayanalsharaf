@@ -41,5 +41,22 @@ struct SwiftPlayground {
      // Printing the tip
         print(tip)
 
+     // Task 2 - Maths coffee art
+        var milk = 20.0
+        let milkNeeded = 0.2
+        let customerPurchase = milkNeeded * 25
+        milk = milk - customerPurchase
+        print(milk)
+
+     // Task 3 - Maths dog years
+        print("Give Spot the Dog an Age Type an integer")
+        let dogAge = Int(readLine()!)!
+
+        let earlyYears = 21 * 2
+        let laterYears = (dogAge - 2) * 4
+        let humanYears = earlyYears + laterYears 
+
+        print("\(dogAge) dog years is \(humanYears) years for humans")
+        
     }
 }
