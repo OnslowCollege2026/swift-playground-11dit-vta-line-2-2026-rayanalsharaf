@@ -4,6 +4,7 @@
 @main
 struct SwiftPlayground {
     static func main() {
+      print("Task 1")
         let x = 5
         let y = 10
     
@@ -42,6 +43,7 @@ struct SwiftPlayground {
         print(tip)
 
      // Task 2 - Maths coffee art
+     print("Task 2")
         var milk = 20.0
         let milkNeeded = 0.2
         let customerPurchase = milkNeeded * 25
@@ -49,6 +51,7 @@ struct SwiftPlayground {
         print(milk)
 
      // Task 3 - Maths dog years
+     print("Task 3")
         print("Give Spot the Dog an Age Type an integer")
         let dogAge = Int(readLine()!)! // Force Converts text input into a whole number (integer)
 
@@ -80,8 +83,30 @@ struct SwiftPlayground {
         let knowsSecret = userInput == "year11DITiscool!" // This is the password
         let canEnterBar = isOldEnough && knowsSecret // both conditions must be true for the result to be true
 
-        print(canEnterBar)
+           print("Access granted: \(canEnterBar)")
 
-    } // closes else code
+        } // this closes the else function from the other code
+
+        // Task 4 -  Booleans task
+        print("Task 4")
+        let a = 10
+        let b = 5
+        let c = a + b 
+        let d = c > b 
+        let e = a < b && a > 20 
+        let f = (b % 2) == 0 || (a % 2) != 0 
+        let g = (c % 2) != 0 || c > 50
+
+        print(d)
+        print(e)
+        print(f)
+        print(g)
+      
+        let isEven = ( age % 2) == 0 // divide age by 2 if there is no remainder.i.e a value greater than 0,then age is odd
+        let isOdd = ( age % 2) != 0// divide age by 2 if there is no remainder.i.e a value greater than 0,then age is odd.
+        print("age is Even: \(isEven)")
+        print("age is Odd: \(isOdd)")
+
+    
 } // closes main function
 } // closes the swift playground fuction
