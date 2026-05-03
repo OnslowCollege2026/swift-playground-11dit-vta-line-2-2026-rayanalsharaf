@@ -50,7 +50,7 @@ struct SwiftPlayground {
 
      // Task 3 - Maths dog years
         print("Give Spot the Dog an Age Type an integer")
-        let dogAge = Int(readLine()!)!
+        let dogAge = Int(readLine()!)! // Force Converts text input into a whole number (integer)
 
         let earlyYears = 21 * 2
         let laterYears = (dogAge - 2) * 4
@@ -66,19 +66,22 @@ struct SwiftPlayground {
         
 
         let isOldEnough = age >= 18
-        if age < 18 {
+        if age < 18 { // This is needed for the code below to run
             print("you are not old enough.")
+            // If not old enough the code stops
         } else {
             print("you are old enough.")
-        }
+        
 
+        // Everything below only runs if you are old enough
         print("Enter your password:")
         userInput = readLine()!
 
-        let knowsSecret = userInput == "year11DITiscool!"
-        let canEnterBar = isOldEnough && knowsSecret
+        let knowsSecret = userInput == "year11DITiscool!" // This is the password
+        let canEnterBar = isOldEnough && knowsSecret // both conditions must be true for the result to be true
 
         print(canEnterBar)
 
-    }
-}
+    } // closes else code
+} // closes main function
+} // closes the swift playground fuction
