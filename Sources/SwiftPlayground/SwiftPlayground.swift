@@ -84,8 +84,13 @@ struct SwiftPlayground {
 
         let knowsSecret = userInput == "year11DITiscool!" // This is the password
         let canEnterBar = isOldEnough && knowsSecret // both conditions must be true for the result to be true
+           if userInput == "year11DITiscool!" {
+            print("Access granted: \(canEnterBar)")
 
-           print("Access granted: \(canEnterBar)")
+           } else {
+             print("Access Denied")
+           
+           
 
         } // this closes the else function from the other code
 
@@ -109,6 +114,6 @@ struct SwiftPlayground {
         print("age is Even: \(isEven)")
         print("age is Odd: \(isOdd)")
 
-    
+        }
 } // closes main function
 } // closes the swift playground fuction
