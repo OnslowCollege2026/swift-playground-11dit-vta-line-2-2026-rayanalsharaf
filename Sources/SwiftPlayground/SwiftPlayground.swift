@@ -69,6 +69,8 @@ struct SwiftPlayground {
         
 
         let isOldEnough = age >= 18
+        
+        // If and else statement inside of task 4 mini
         if age < 18 { // This is needed for the code below to run
             print("you are not old enough.")
             // If not old enough the code stops
@@ -87,8 +89,8 @@ struct SwiftPlayground {
 
         } // this closes the else function from the other code
 
-        // Task 4 -  Booleans task
-        print("Task 4")
+        // Task 5 -  Booleans task
+        print("Task 5")
         let a = 10
         let b = 5
         let c = a + b 
