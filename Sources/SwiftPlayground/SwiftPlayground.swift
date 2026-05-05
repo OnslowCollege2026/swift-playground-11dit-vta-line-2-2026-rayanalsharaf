@@ -65,7 +65,7 @@ struct SwiftPlayground {
         print("Enter your age")
         
         var userInput = readLine()!
-        let age = Int(userInput)!
+        let age = Int(userInput)! 
         
 
         let isOldEnough = age >= 18
@@ -115,5 +115,24 @@ struct SwiftPlayground {
         print("age is Odd: \(isOdd)")
 
         }
+        
+        // Task 6 - Arrays Tokyo Subway
+        print("Task 6")
+        var AdultFares: [Int] = [800, 1200, 1500] // An empty array
+        print("AdultFares: \(AdultFares)") 
+        var ChildFares: [Int] = [400, 600, 750]
+        print("ChildFares: \(ChildFares)")
+        var TicketTypes: [String] = ["ticketnames(24-hour, 48-hour, 72-hour)"]
+        print("TicketTypes: \(TicketTypes)")
+        print("What is your age? (Adult or Child)")
+        let Age = readLine()! // Stores "Adult" or "Child in readLine
+
+        print("Pick a ticket type: 1, 2, or 3")
+        // We read the input once and cast to an Int
+        let TicketType = Int(readLine()!)! // Changing this readLine to a Int
+
+        print("You are a \(Age) and your ticket type is \(TicketType)")
+        
+
 } // closes main function
 } // closes the swift playground fuction
