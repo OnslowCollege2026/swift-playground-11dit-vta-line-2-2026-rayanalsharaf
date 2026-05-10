@@ -118,11 +118,11 @@ struct SwiftPlayground {
         
         // Task 6 - Arrays Tokyo Subway
         print("Task 6")
-        var AdultFares: [Int] = [800, 1200, 1500] // An empty array
+        let AdultFares: [Int] = [800, 1200, 1500] // An empty array
         print("AdultFares: \(AdultFares)") 
-        var ChildFares: [Int] = [400, 600, 750]
+        let ChildFares: [Int] = [400, 600, 750]
         print("ChildFares: \(ChildFares)")
-        var TicketTypes: [String] = ["ticketnames(24-hour, 48-hour, 72-hour)"]
+        let TicketTypes: [String] = ["ticketnames(24-hour, 48-hour, 72-hour)"]
         print("TicketTypes: \(TicketTypes)")
         print("What is your age? (Adult or Child)")
         let Age = readLine()! // Stores "Adult" or "Child in readLine
@@ -132,6 +132,13 @@ struct SwiftPlayground {
         let TicketType = Int(readLine()!)! // Changing this readLine to a Int
 
         print("You are a \(Age) and your ticket type is \(TicketType)")
+
+        // Task 7 Loops
+        let items = ["Ardiene", "Liam","Arjun", "Albert"]
+
+        items.forEach { item in
+             print(item)
+        }
         
 
 } // closes main function
