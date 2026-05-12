@@ -134,12 +134,69 @@ struct SwiftPlayground {
         print("You are a \(Age) and your ticket type is \(TicketType)")
 
         // Task 7 Loops
-        let items = ["Ardiene", "Liam","Arjun", "Albert"]
+        let names = ["Ardiene", "Liam","Arjun", "Albert"]
 
-        items.forEach { item in
-             print(item)
+        names.forEach { names in
+             print("\(names) is invited to my party")
         }
         
+        // for loop
+        (15...30).forEach { number in 
+         print(number)
+         // stride
+         stride(from: 2000, to: 2026, by: 4).forEach { leapyear in
+         print(leapyear)
+         }
+         // loop if statment-stride
+         stride(from: 100, to: 0, by: -1).forEach {i in
 
+         // if it does, remainder for NUM is REM
+         // if it doesnt not, print no remainder for NUM
+         if i % 3 == 0 {
+            print("No remainder for \(i)")
+         } else {
+            print("Remainder for \(i) is \(i % 3)")
+         }
+         }
+          // Task 8
+          print("Task 8 - Ticket Prices")
+
+         var isRunning = true
+         var totalPrice = 0
+
+         while isRunning {
+            print("(C)hild - $8")
+            print("(A)dult - $12")
+            print("(S)enior - $10")
+            print("(Q)uit")
+
+            print("Select a ticket you want to purchase: ")
+            let option = readLine()!.lowercased()
+               
+            if option == "C" {
+               totalPrice += 8
+
+            } else if option == "A" {
+               totalPrice += 12
+
+            } else if option == "S" {
+               totalPrice += 10
+
+            } else if option == "Q" {
+               isRunning = false
+
+            } else {
+              print("Wrong choice, Try again") 
+            }
+            print("Total price is: $\(totalPrice)")
+
+         
+        }
+         
+         
+
+
+     
+        }
 } // closes main function
 } // closes the swift playground fuction
