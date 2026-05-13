@@ -179,7 +179,7 @@ struct SwiftPlayground {
             totalPrice += 10
 
          } else if option == "q" {
-            // print("asdas")
+            // print("asdas") This is testing for any errors
             isRunning = false
 
          } else {
