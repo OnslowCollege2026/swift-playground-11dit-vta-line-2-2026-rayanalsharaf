@@ -166,9 +166,9 @@ struct SwiftPlayground {
          print("(Q)uit")
 
          print("Select a ticket you want to purchase: ")
-         let option = readLine()!.lowercased()
+         let option = readLine()!.lowercased() // the lowercased will only work if the option is in lowercase
 
-         // print ("opt: \(option)")
+         // print ("opt: \(option)") this also is testing for any errors
          if option == "c" {
             totalPrice += 8
 
@@ -179,7 +179,7 @@ struct SwiftPlayground {
             totalPrice += 10
 
          } else if option == "q" {
-            // print("asdas") This is testing for any errors
+            // print("asdas") This is testing for any errors 
             isRunning = false
 
          } else {
