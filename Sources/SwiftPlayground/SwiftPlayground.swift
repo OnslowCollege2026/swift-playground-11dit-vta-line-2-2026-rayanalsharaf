@@ -180,7 +180,7 @@ struct SwiftPlayground {
 
          } else if option == "q" {
             // print("asdas") This is testing for any errors 
-            isRunning = false
+            isRunning = false // stops code
 
          } else {
             print("Wrong choice, Try again")
