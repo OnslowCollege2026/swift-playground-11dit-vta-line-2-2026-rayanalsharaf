@@ -4,7 +4,7 @@
 @main
 struct SwiftPlayground {
    static func main() {
-      print("Task 1")
+      print("Task 1:")
       let x = 5
       let y = 10
 
@@ -26,29 +26,29 @@ struct SwiftPlayground {
       print("\(x) / \(y) = \(divided)")
       print("\(x) % \(y) = \(remander)")
 
-      print("\(y) + \(x) = \(added2)")
-      print("\(y) - \(x) = \(subtracted2)")
-      print("\(y) * \(x) = \(multipled2)")
-      print("\(y) / \(x) = \(divided2)")
-      print("\(y) % \(x) = \(remander2)")
+      print("\(y) + \(x) = \(added2)")  // addition sign
+      print("\(y) - \(x) = \(subtracted2)")  // subtraction sign
+      print("\(y) * \(x) = \(multipled2)")  // multiplication sign
+      print("\(y) / \(x) = \(divided2)")  // division sign
+      print("\(y) % \(x) = \(remander2)")  // remander sign
 
       // Task 1 - define two constants.
-      let amount = 18.5
-      let tip = amount / 5
+      let amount = 18.5  // constant (amount)
+      let tip = amount / 5  // constant (tip)
 
       // Printing the tip
       print(tip)
 
       // Task 2 - Maths coffee art
-      print("Task 2")
+      print("Task 2:")
       var milk = 20.0
       let milkNeeded = 0.2
-      let customerPurchase = milkNeeded * 25
+      let customerPurchase = milkNeeded * 25  // using math with the interger and a variable
       milk = milk - customerPurchase
       print(milk)
 
       // Task 3 - Maths dog years
-      print("Task 3")
+      print("Task 3:")
       print("Give Spot the Dog an Age Type an integer")
       let dogAge = Int(readLine()!)!  // Force Converts text input into a whole number (integer)
 
@@ -59,6 +59,7 @@ struct SwiftPlayground {
       print("\(dogAge) dog years is \(humanYears) years for humans")
 
       // Task 4 mini task Boolean
+      print("Task 4 mini:")
       print("Enter your age")
 
       var userInput = readLine()!
@@ -88,19 +89,19 @@ struct SwiftPlayground {
          }  // this closes the else function from the other code
 
          // Task 5 -  Booleans task
-         print("Task 5")
-         let a = 10
-         let b = 5
-         let c = a + b
-         let d = c > b
-         let e = a < b && a > 20
-         let f = (b % 2) == 0 || (a % 2) != 0
-         let g = (c % 2) != 0 || c > 50
+         print("Task 5:")
+         let a = 10  // assigning a variable to a integer
+         let b = 5  // b is equal to 5 in this task
+         let c = a + b  // "a" plus "b" is "c"
+         let d = c > b  // "c" is greater than "b"
+         let e = a < b && a > 20  // "b" is greater than "a" is false and "a" is greater than 20 is false. so they are both false
+         let f = (b % 2) == 0 || (a % 2) != 0  // "b" divided by 2 is 0 is false and a divided by 2 is not 0 is true so the lhs is false and the rhs is true
+         let g = (c % 2) != 0 || c > 50  // "c" divided by 2 is not 0 is true and "c" is greater than 50 is false
 
-         print(d)
-         print(e)
-         print(f)
-         print(g)
+         print(d)  // prints the numbers
+         print(e)  // prints the numbers
+         print(f)  // prints the numbers
+         print(g)  // prints the numbers
 
          let isEven = (age % 2) == 0  // divide age by 2 if there is no remainder.i.e a value greater than 0,then age is odd
          let isOdd = (age % 2) != 0  // divide age by 2 if there is no remainder.i.e a value greater than 0,then age is odd.
@@ -109,9 +110,9 @@ struct SwiftPlayground {
 
       }
 
-      // Task 6 - Arrays Tokyo Subway
-      print("Task 6")
-      let AdultFares: [Int] = [800, 1200, 1500]  // An empty array
+      // Task 6 - Arrays code - Tokyo Subway
+      print("Task 6:")
+      let AdultFares: [Int] = [800, 1200, 1500]  // An array
       print("AdultFares: \(AdultFares)")
       let ChildFares: [Int] = [400, 600, 750]
       print("ChildFares: \(ChildFares)")
@@ -127,13 +128,14 @@ struct SwiftPlayground {
       print("You are a \(Age) and your ticket type is \(TicketType)")
 
       // Task 7 Loops
+      print("Task 7 Loops:")
       let names = ["Ardiene", "Liam", "Arjun", "Albert"]
 
-      names.forEach { names in
+      names.forEach { names in  // prints it for how many strings are in the *names*
          print("\(names) is invited to my party")
       }
 
-      // for loop
+      // for loop code
       (15...30).forEach { number in
          print(number)
          // stride
@@ -153,20 +155,20 @@ struct SwiftPlayground {
          }
       }
 
-      // Task 8
-      print("Task 8 - Ticket Prices")
+      // Task 8 - while statement
+      print("Task 8 - Ticket Prices:")
 
       var isRunning = true
       var totalPrice = 0
 
-      while isRunning {
+      while isRunning {  // while loops code
          print("(C)hild - $8")
          print("(A)dult - $12")
          print("(S)enior - $10")
          print("(Q)uit")
 
          print("Select a ticket you want to purchase: ")
-         let option = readLine()!.lowercased() // the lowercased will only work if the option is in lowercase
+         let option = readLine()!.lowercased()  // the lowercased will only work if the option is in lowercase
 
          // print ("opt: \(option)") this also is testing for any errors
          if option == "c" {
@@ -179,8 +181,8 @@ struct SwiftPlayground {
             totalPrice += 10
 
          } else if option == "q" {
-            // print("asdas") This is testing for any errors 
-            isRunning = false // stops code
+            // print("asdas") This is testing for any errors
+            isRunning = false  // stops code
 
          } else {
             print("Wrong choice, Try again")
@@ -189,6 +191,46 @@ struct SwiftPlayground {
          print("Total price is: $\(totalPrice)")
 
       }
+      
+      // Task 9 - Modifying arrays
+      print("Task 9: ")
+      var invitees:[String] = [] // initialize empty array
+      var isInviting = true
+      while isInviting {
+         print("Who is invited to the party?")
+         let names = readLine()!
+
+      if names == ""{
+         isInviting = false
+      }else{
+         invitees.append(names)
+      } 
+      } // while loop task 9 bracket
+      var deleting = true
+      while deleting {
+         print("\(invitees) are in your invitation list")
+         print("Who do you want to remove from the list?")
+         let removedInvitee = readLine()!
+
+         if removedInvitee == ""{
+            deleting = false
+         }else{
+            // 1. firstIndex(of:) searches the array from left to right for the name.
+           // 2. If found, it returns the position (index number). If not found, it returns 'nil'.
+           // 3. 'if let' checks if an index was actually found before running the code inside the brackets.
+            if let index = invitees.firstIndex(of: removedInvitee) {
+               invitees.remove(at: index)
+               // 4. remove(at:) deletes the item sitting at that exact position
+               print("Removed \(removedInvitee)")
+            }else{
+                // 5. This runs only if firstIndex returned 'nil' (the name wasn't in the array).
+               print("\(removedInvitee) is not in the list")
+            }
+         }
+      
+      } // while loop bracket 
+
+      
 
    }  // closes main function
 }  // closes the swift playground fuction
