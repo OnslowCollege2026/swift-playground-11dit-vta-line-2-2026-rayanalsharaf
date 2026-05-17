@@ -196,7 +196,7 @@ struct SwiftPlayground {
       print("Task 9: ")
       var invitees:[String] = [] // initialize empty array
       var isInviting = true
-      while isInviting {
+      while isInviting { // while loop
          print("Who is invited to the party?")
          let names = readLine()!
 
@@ -230,7 +230,25 @@ struct SwiftPlayground {
       
       } // while loop bracket 
 
-      
+      // Tast 10 - Decomposition
+      print("Task 10:")
+      var ingredients: [String] = [] // final ingredients list variable
+      var isBaking = true // means that while this is true is will keep doing the while loop
+
+      while isBaking { // while loop
+         print("What ingredients do you have?") // this asks the user the question
+         let food = readLine()!
+
+         if food == "Chocolate"{ // if statement
+            print("Yum!")
+
+         } else if food == "" {
+            isBaking = false // makes isBaking false so no more while loop
+            print("Your Ingredients: \(ingredients)")
+         }
+          ingredients.append(food)
+         }
+         print("Let's start cooking!")
 
    }  // closes main function
 }  // closes the swift playground fuction
