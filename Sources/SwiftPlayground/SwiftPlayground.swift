@@ -246,18 +246,18 @@ struct SwiftPlayground {
             isBaking = false // makes isBaking false so no more while loop
             print("Your Ingredients: \(ingredients)")
          }
-          ingredients.append(food)
+          ingredients.append(food) // this adds an element into the end of a array
          }
          print("Let's start cooking!")
 
-         // My Task - wordle (not to do with school)
-         print("This is the Daily Wordle")
+         // My Task - wordle (not to do with school prototype)
+         print("This is the Daily Wordle (prototype version)")
 
         let secretWord = "loans"
         var isPlaying = true
 
         while isPlaying {
-            print("Enter a letter or Guess the word:")
+            print("Type one letter at a time and try to guess the word:")
             guard let dailyWordle = readLine() else { return }
 
             if dailyWordle == secretWord {
@@ -346,7 +346,6 @@ struct SwiftPlayground {
             if dailyWordle == "I give up" {
                isPlaying = false
             }
-
 
         }
 
