@@ -4,7 +4,10 @@
 @main
 struct SwiftPlayground {
     static func main() {
-        print("Task 1:")
+        
+        struct Task1 {
+            init(){
+        print("Task 1:") 
         let x = 5
         let y = 10
 
@@ -31,6 +34,11 @@ struct SwiftPlayground {
         print("\(y) * \(x) = \(multipled2)")  // multiplication sign
         print("\(y) / \(x) = \(divided2)")  // division sign
         print("\(y) % \(x) = \(remander2)")  // remander sign
+            }
+        }
+        struct Task1_5 {
+
+            init(){
 
         // Task 1 - define two constants.
         let amount = 18.5  // constant (amount)
@@ -38,7 +46,13 @@ struct SwiftPlayground {
 
         // Printing the tip
         print(tip)
+            }
+        }
 
+        
+        
+        struct Task2 {
+            init() {
         // Task 2 - Maths coffee art
         print("Task 2:")
         var milk = 20.0
@@ -46,7 +60,13 @@ struct SwiftPlayground {
         let customerPurchase = milkNeeded * 25  // using math with the interger and a variable
         milk = milk - customerPurchase
         print(milk)
+            }
 
+        }
+
+        struct Task3 {
+            init(){
+        
         // Task 3 - Maths dog years
         print("Task 3:")
         print("Give Spot the Dog an Age Type an integer")
@@ -57,7 +77,11 @@ struct SwiftPlayground {
         let humanYears = earlyYears + laterYears
 
         print("\(dogAge) dog years is \(humanYears) years for humans")
+            }
+        }
 
+struct Task4 {
+            init(){
         // Task 4 mini task Boolean
         print("Task 4 mini:")
         print("Enter your age")
@@ -88,8 +112,15 @@ struct SwiftPlayground {
 
             }  // this closes the else function from the other code
 
+        }
+            }
+
+struct Task5 {
+            init(){
             // Task 5 -  Booleans task
             print("Task 5:")
+            let userInput = readLine()!
+            let age = Int(userInput)!
             let a = 10  // assigning a variable to a integer
             let b = 5  // b is equal to 5 in this task
             let c = a + b  // "a" plus "b" is "c"
@@ -109,6 +140,11 @@ struct SwiftPlayground {
             print("age is Odd: \(isOdd)")
 
         }
+         }
+        }
+
+        struct Task6 {
+            init(){
 
         // Task 6 - Arrays code - Tokyo Subway
         print("Task 6:")
@@ -126,6 +162,12 @@ struct SwiftPlayground {
         let TicketType = Int(readLine()!)!  // Changing this readLine to a Int
 
         print("You are a \(Age) and your ticket type is \(TicketType)")
+
+            }
+        }
+
+        struct Task7 {
+            init(){
 
         // Task 7 Loops
         print("Task 7 Loops:")
@@ -155,6 +197,11 @@ struct SwiftPlayground {
             }
         }
 
+            }
+        }
+struct Task8 {
+            init(){
+            
         // Task 8 - while statement
         print("Task 8 - Ticket Prices:")
 
@@ -191,6 +238,13 @@ struct SwiftPlayground {
             print("Total price is: $\(totalPrice)")
 
         }
+
+        
+            }
+        }
+
+struct Task9 {
+            init(){
 
         // Task 9 - Modifying arrays
         print("Task 9: ")
@@ -230,6 +284,13 @@ struct SwiftPlayground {
 
         }  // while loop bracket
 
+
+            }
+        }
+
+struct Task10 {
+            init(){
+
         // Tast 10 - Decomposition
         print("Task 10:")
         var ingredients: [String] = []  // final ingredients list variable
@@ -249,6 +310,13 @@ struct SwiftPlayground {
             ingredients.append(food)  // this adds an element into the end of a array
         }
         print("Let's start cooking!")
+
+
+            }
+        }
+
+struct Task10_letterdle {
+            init(){
 
         // My Task - wordle (not to do with school prototype)
         print("This is the Daily Wordle (prototype version)")
@@ -343,9 +411,19 @@ struct SwiftPlayground {
                 print("none in the word")
             }
 
+            if dailyWordle == "Q" {
+                isPlaying = false
+            }
             if dailyWordle == "I give up" {
                 isPlaying = false
             }
+
+
+            }
+        }
+
+            struct Task10_wordle {
+            init(){
 
             // Wordle - not prototype array (friend)
             let answer = ["C", "H", "A", "I", "N"]
@@ -370,9 +448,20 @@ struct SwiftPlayground {
                 } else {
                     print("⬜️", terminator: " ")
                 }
+                 
+                if guess[i] == "Q" {
+                    print("You have quit the game.")
+                    break // this closes the code and exits the loop savly
+                }
                 i = i + 1
             }
         }
 
+            } // struct task
+        } // init
+            
+
+
     }  // closes main function
 }  // closes the swift playground fuction
+    
