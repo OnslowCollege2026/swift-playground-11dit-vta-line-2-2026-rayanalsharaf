@@ -504,5 +504,3 @@ Task - Only to accept people in if they are over the age of 18 */
     }  // closes main function
 }  // closes the swift playground fuction
 
-     }  // random
-      }  // random
