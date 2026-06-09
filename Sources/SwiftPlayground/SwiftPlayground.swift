@@ -518,7 +518,7 @@ Task - Only to accept people in if they are over the age of 18 */
         
         // if bird it prints the list of birds. if insect it prints the list of insects.
         if birdOrInsect == "bird" {
-            bird.enumerared().forEach { index, bird in 
+            bird.enumerated().forEach { index, bird in 
             print("\(index). \(bird)")
             print("Which insect did you see?")
             isTracking = false
@@ -539,18 +539,55 @@ Task - Only to accept people in if they are over the age of 18 */
 
         print("Enter a number: ")
         let birdIndex = Int(readLine)()!)!
-        print("\(bird[birdIndex])")
+        print("added a \(bird[birdIndex])")
 
         } else if birdOrInsect == "insect" {
             insect.enumerated().forEach { index, insect in
-            print("\(index). \(insect)")
+            print("added a \(insect[insectIndex])")
         }
-        }else {
 
+        }else {
+            isTracking = false
         }
 
         // while loop close
         } 
+
+        var isYesOrNO = true
+        let askingYesOrNo:  [String] = []
+
+        while isYesOrNo {
+            print("Do you want to add another (Y/N):")
+            let askingYesOrNo = readLine()!
+
+        
+        if askingYesOrNo == "Y" {
+            continue
+        } else if askingYesOrNo == "N" {
+            print("Bye")
+            isYesOrNo = false
+        } else {
+            print("Please enter Y or N")
+        }
+        } // while
+
+        var isAdding = true
+        let addingBirdOrInsect: [String] = []
+
+        while isAdding {
+            print("Did you see a bird or a insect:")
+            let addingBirdOrInsect = readline()!.lowercased
+
+            if addingBirdOrInsect == "bird" {
+                print("which bird did you see?")
+
+            } else if addingBirdOrInsect == "insect" {
+                print("which insect did you see?")work
+            }
+            
+            
+
+        } // while
 
 
 
