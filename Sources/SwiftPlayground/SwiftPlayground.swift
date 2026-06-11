@@ -505,8 +505,11 @@ Task - Only to accept people in if they are over the age of 18 */
         // Prints Welcome message
         print("Welcome to Zealandia Tracker.")
 
-        var isTracking: Bool = true
+        var isTracking = true
         let birdOrInsect: [String] = []
+        let birdSeen: [String] = []
+        let insectSeen: [String] = []
+        let userInput = readLine()
 
         let bird = [" 0.Tieke", "1.Kaka", "2.Takahe", "3.Hihi", "4.Kiwi", "5.Pateke", "6.Tui", "7.Kereru"]
         let insect = ["0.Giant Weta", "1.Tree weta", "2.Cave weta", "3.Putoko", "4.Pungawerewere", "5.Ngaokeoke", "6.Waemano", "7.Kapowai"]
@@ -520,18 +523,38 @@ Task - Only to accept people in if they are over the age of 18 */
         if birdOrInsect == "bird" {
             bird.enumerated().forEach { index, bird in 
             print("\(index). \(bird)")
-            print("Which insect did you see?")
-            isTracking = false
+            print("Which bird did you see?")
             }
+
+            if let userInput = Int(readLine()!)!
+            let index = userInput
+            if index >= -1 && index < 7 {
+                birdSeen.append(bird[index])
+                print("\(userInput) is invalid. Please type a valid integer from 0 to 7")
+                continue
+            }
+            
+            
 
         } else if birdOrInsect == "insect" {
             // enumerated makes the list of insects a numbered list.
             insect.enumerated().forEach { index, insect in 
             print("\(index). \(insect)")
-            print(insect)
             print("Which insect did you see?")
-            isTracking = false
+            
             }
+
+            if let userInput = Int(readLine()!)!
+            let index = userInput
+            if index >= -1 && index < 7 {
+                insectSeen.append(bird[index])
+                print("\(userInput) is invalid. Please type a valid integer from 0 to 7")
+                continue
+            }
+
+
+
+
 
         } else {
             print("Enter valid bird or insect")
@@ -542,7 +565,7 @@ Task - Only to accept people in if they are over the age of 18 */
         print("added a \(bird[birdIndex])")
 
         } else if birdOrInsect == "insect" {
-            insect.enumerated().forEach { index, insect in
+            let insectIndex = Int(readLine)()!)!
             print("added a \(insect[insectIndex])")
         }
 
@@ -558,7 +581,7 @@ Task - Only to accept people in if they are over the age of 18 */
 
         while isYesOrNo {
             print("Do you want to add another (Y/N):")
-            let askingYesOrNo = readLine()!
+            let askingYesOrNo = readLine()!.uppercased()
 
         
         if askingYesOrNo == "Y" {
@@ -569,30 +592,32 @@ Task - Only to accept people in if they are over the age of 18 */
         } else {
             print("Please enter Y or N")
         }
-        } // while
+        // while loop close
+        } 
 
         var isAdding = true
         let addingBirdOrInsect: [String] = []
 
         while isAdding {
             print("Did you see a bird or a insect:")
-            let addingBirdOrInsect = readline()!.lowercased
+            let addingBirdOrInsect = readline()!.lowercased()
 
             if addingBirdOrInsect == "bird" {
                 print("which bird did you see?")
 
             } else if addingBirdOrInsect == "insect" {
-                print("which insect did you see?")work
+                print("which insect did you see?")
             }
             
-            
-
-        } // while
-
+          // while loop close  
+        }
 
 
 
 
-    }  // closes main function
-}  // closes the swift playground fuction
+     // closes main function
+    }
+
+     // closes the swift playground fuction
+    }   
 
