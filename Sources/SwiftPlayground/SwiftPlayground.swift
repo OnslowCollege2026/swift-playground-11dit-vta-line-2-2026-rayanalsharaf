@@ -629,22 +629,46 @@ Task - Only to accept people in if they are over the age of 18 */
 
         // Practice assesment - Sleep tracker 
         print("Welcome to Sleep Tracker.")
-
+        
+        // Creating constants for the list of days in the week from Monday to Friday. 
         let goodSleepTime: Int = 8
         let okSleepTime: Int = 6
         let days: [String] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
         var day = 0
         var totalSleepTime: Int = 0
-        var isRunning  = true
-    
 
+        // Starts the while loop and the Bool allows isRunning to always be either true or false
+        var isRunning: Bool = true
+    
+        // while loop 
         while isRunning {
+
+            if day >= days.count {
+                let avgSleepTime = totalSleepTime / days.count
+                print("You slept for a total \(totalSleepTime) hours, average \(avgSleepTime) hours a day.")
+
+                if avgSleepTime >= goodSleepTime {
+                    print("You have a good sleep schedule.")
+                }
+                if avgSleepTime >= okSleepTime {
+                    print("You have an ok sleep schedule")
+                } else {
+                    print("You have a bad sleep schedule")
+                }
+
+                // ends the while loop
+                isRunning = false
+                break
+            }
+
             let minSleepTime = 3
             let maxSleepTime = 12
             print("How many hours of sleep did you get on \(days[day])?")
-            let userInput = Int(readLine()!)!
+            let userInput: Int = Int(readLine()!)!
             if userInput > minSleepTime && userInput < maxSleepTime {
             totalSleepTime += userInput
+            print("Added \(userInput) hours.")
+            day += 1
             }
             else {
                 print("Please type a valid integer from 3 to 12.")
