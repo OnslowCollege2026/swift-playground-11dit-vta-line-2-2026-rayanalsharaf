@@ -636,6 +636,7 @@ Task - Only to accept people in if they are over the age of 18 */
         var day = 0
         var totalSleepTime: Int = 0
         var isRunning  = true
+    
 
         while isRunning {
             let minSleepTime = 3
@@ -644,7 +645,6 @@ Task - Only to accept people in if they are over the age of 18 */
             let userInput = Int(readLine()!)!
             if userInput > minSleepTime && userInput < maxSleepTime {
             totalSleepTime += userInput
-            day += 
             }
             else {
                 print("Please type a valid integer from 3 to 12.")
