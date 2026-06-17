@@ -634,15 +634,17 @@ Task - Only to accept people in if they are over the age of 18 */
         let goodSleepTime: Int = 8
         let okSleepTime: Int = 6
         let days: [String] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+        // Sets it at 0 so when we want to call a String from the list we can add 1 to it every time it asks the question.
         var day = 0
         var totalSleepTime: Int = 0
 
         // Starts the while loop and the Bool allows isRunning to always be either true or false
         var isRunning: Bool = true
     
-        // while loop 
+        // while loop asking the question.
         while isRunning {
 
+            // Reads the list of days and once we get to the end of the list it stops the while loop.
             if day >= days.count {
                 let avgSleepTime = totalSleepTime / days.count
                 print("You slept for a total \(totalSleepTime) hours, average \(avgSleepTime) hours a day.")
@@ -656,18 +658,23 @@ Task - Only to accept people in if they are over the age of 18 */
                     print("You have a bad sleep schedule")
                 }
 
-                // ends the while loop
+                // Ends the while loop
                 isRunning = false
                 break
             }
-
+            
+            // Creates the constant to set the ideal sleep time bounderies from 3 - 12
             let minSleepTime = 3
             let maxSleepTime = 12
+            // Asks how many hours of sleep the user got and on which day
             print("How many hours of sleep did you get on \(days[day])?")
             let userInput: Int = Int(readLine()!)!
+            // If the user typed a valid integer between 3 - 12
             if userInput > minSleepTime && userInput < maxSleepTime {
             totalSleepTime += userInput
+            // prints how many hours of sleep the user got
             print("Added \(userInput) hours.")
+            // Does plus 1 every time it asks the question so it goes down the list
             day += 1
             }
             else {
@@ -679,9 +686,9 @@ Task - Only to accept people in if they are over the age of 18 */
 
 
 
-     // closes main function
+     // Closes main function
     }
 
-     // closes the swift playground fuction
+     // Closes the swift playground fuction
     }   
 
