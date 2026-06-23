@@ -706,28 +706,29 @@ Task - Only to accept people in if they are over the age of 18 */
         while isLimiting {
             print("What is the hour limit set for each day?")
             print("Enter a number:")
-            let limitInput: Int = Int(readLine()!)!
+            let limitHourInput: Int = Int(readLine()!)!
+            if limitHourInput < maxScreenTime && > minScreenTime {
+                continue
+            } else {
+                print("Enter a valid integer from 0 to 24")
+            }
         }
 
         while isRunning {
+            for day in days {
+                for app in apps {
             print("On \(day) how many hours did you spend on:")
-            let userInput: Int = Int(readLine()!)!
+            let userInput: Int = Int(readLine()!)
+                }
             print("\(app):")
+            app += 1
+                }
 
-            if userInput >= minScreenTime && userInput < maxScreenTime (
-                app += 1
+            if userInput >= minScreenTime && userInput < maxScreenTime {
+               day += 1
+            }
         }
-        
-         else {
-            print("Enter a valid integer from 0 to 24")
-        }
-
-    } else {
-        print("Enter a valid integer from 0 to 24")
-    }
     
-
-
         
 
 
